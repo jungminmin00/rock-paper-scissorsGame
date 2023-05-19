@@ -1,0 +1,56 @@
+body{
+    background-color: rgba(255, 165, 240, 0.4);
+    background-image:
+      linear-gradient(90deg, rgba(255, 165, 240, .3) 50%, transparent 50%),
+      linear-gradient(rgba(255, 165, 240, .3) 50%, transparent 50%);
+    background-size: 40px 40px;
+}
+#wrap{
+  width: 650px;
+  height: 700px;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  text-align: center;
+  align-items: center;
+  padding-top: 40px;
+}
+h1{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#wrap>div{
+    padding: 20px 0;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 500px;
+    line-height: 40px;
+}
+div.victory{
+}
+div.btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+button{
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #555;
+    width: 100px;
+    height: 100px;
+    
+}
+#wrap>button{
+    width: auto;
+    height: auto;
+    padding: 12px 30px;
+    background-color: red;
+    border: none;
+    border-radius: 30px;
+}

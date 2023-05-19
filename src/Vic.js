@@ -1,5 +1,7 @@
-export default function Vic(){
+export default function Vic({children, vic}){
     return(
-        <></>
+        <>
+        <p>{children} {vic}</p>
+        </>
     );
 }
