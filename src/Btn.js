@@ -1,72 +1,30 @@
-import BtnClick from './BtnClick.js';
-
-
-
-export default function Btn({com,random, user, userVic, comVic, setUser }){
+export default function Btn({com,random, user, setUser}){
     /* 바위 클릭 */
-    function rockClick(userVic, comVic){
+    function rockClick(){
         setUser([...user, "바위"]);
         random();
-        const comRock = com[com.length - 1];
-
-        if(comRock === '바위'){
-            userVic += 0;
-            comVic += 0;
-        }else if(comRock === '가위'){
-            // console.log('이김')
-            userVic++;
-        }else if(comRock === '보자기'){
-            // console.log('짐')
-            comVic++;
-        }
     }
     /* 가위 클릭 */
-    function scissorsClick(userVic, comVic){
+    function scissorsClick(){
         setUser([...user, "가위"]);
         random();
-        const comRock = com[com.length - 1];
-
-        if(comRock === '바위'){
-            // console.log('짐')
-            comVic++;
-        }else if(comRock === '가위'){
-            userVic += 0;
-            comVic += 0;
-        }else if(comRock === '보자기'){
-            // console.log('이김')
-            userVic++;
-        }
-
     }
     /* 보자기 클릭 */
-    function paperClick({userVic,comVic}){
+    function paperClick(){
         setUser([...user, "보자기"]);
         random();
-        const comRock = com[com.length - 1];
-
-        if(comRock === '바위'){
-            // console.log('이김')
-            userVic++;
-        }else if(comRock === '가위'){
-            // console.log('짐')
-            comVic++;
-        }else if(comRock === '보자기'){
-            userVic += 0;
-            comVic += 0;
-        }
-
     }
     return(
         <div className='btn'>
-            <BtnClick
+            <button
                 onClick = {rockClick}
-            >바위</BtnClick>
-            <BtnClick
+            >바위</button>
+            <button
                 onClick = {scissorsClick}
-            >가위</BtnClick>
-            <BtnClick
+            >가위</button>
+            <button
                 onClick = {paperClick}
-            >보자기</BtnClick>
+            >보자기</button>
             
         
         </div>

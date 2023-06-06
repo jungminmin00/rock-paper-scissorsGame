@@ -7,11 +7,8 @@ import String from './String.js';
 
 
 function App() {
-  
   const [user, setUser] = useState([]);
   const [com, setCom] = useState([]);
-  let userVic = 0;
-  let comVic = 0;
   function random(){
     const comArr = ['바위', '가위', '보자기'];
     let comAnswer = Math.floor(Math.random() * comArr.length);
@@ -36,15 +33,11 @@ function App() {
       <String 
         user = {user}
         com = {com}
-        userVic = {userVic}
-        comVic = {comVic}
       />
 
       <Btn 
         com = {com}
         user = {user}
-        userVic = {userVic}
-        comVic = {comVic}
         setUser = {setUser}
         random = {random}
       />
